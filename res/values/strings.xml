@@ -5,4 +5,13 @@
     <string name="titleStatus">Status Update</string>
     <string name="hintText">Please enter your 140-character status</string>
     <string name="buttonUpdate">Update</string>
+    <string name="prefUsernameLabel">Username</string>
+    <string name="prefUsernameSummary">Please enter your username</string>
+    <string name="prefPasswordLabel">Password</string>
+    <string name="prefPasswordSummary">Please enter you password</string>
+    <string name="prefApiLabel">API Root</string>
+    <string name="prefApiSummary">Please enter your API Root</string>
+    <string name="titlePreference">Yamba Preferences</string>
+    <string name="menuPrefLabel">Preferences</string>
+    <string name="menuPrefCondensed">Pref</string>
 </resources>
