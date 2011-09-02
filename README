@@ -1,0 +1,5 @@
+This is an android project created to follow along Learning Android. It's a twitter like app that can post status updates and pull timeline from the web host. It demonstrates several important android app features such as activities, intents, background services, connecting to web services, databases, broadcast receivers, content providers etc. 
+
+The text book is online here: http://ofps.oreilly.com/titles/9781449390501/index.html (as of 9/2011)
+
+You can read the commit history to see the code added for different features.
