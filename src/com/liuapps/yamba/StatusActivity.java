@@ -23,13 +23,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class StatusActivity extends Activity implements OnClickListener, TextWatcher, OnSharedPreferenceChangeListener{
+public class StatusActivity extends Activity implements OnClickListener, TextWatcher{
 	private static final String TAG = "StatusActivity";
+	YambaApplication yamba;
 	EditText editText;
 	Button updateButton;
 	TextView textCount;
-	Twitter twitter;
-	SharedPreferences prefs; 
 	
 	/** Called when the activity is first created. */
     @Override
@@ -40,14 +39,11 @@ public class StatusActivity extends Activity implements OnClickListener, TextWat
         editText = (EditText) findViewById(R.id.editText);
         updateButton = (Button) findViewById(R.id.buttonUpdate);
         textCount = (TextView) findViewById(R.id.textCount);
+        yamba = (YambaApplication) getApplication();
         
         updateButton.setOnClickListener(this);
         editText.addTextChangedListener(this);
         _setCharLeftText(140);
-        
-        prefs = PreferenceManager.getDefaultSharedPreferences(this);
-        prefs.registerOnSharedPreferenceChangeListener(this);
-       
     }
     
     @Override
@@ -73,7 +69,6 @@ public class StatusActivity extends Activity implements OnClickListener, TextWat
 
 	public void onClick(View w) {
     	new PostToTwitter().execute(editText.getText().toString());
-    	
     	Log.d(TAG, "onClicked");
     }
 
@@ -93,13 +88,6 @@ public class StatusActivity extends Activity implements OnClickListener, TextWat
 	}
 
 	
-	@Override
-	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
-			String key) {
-		// TODO Auto-generated method stub
-		twitter = null;
-	}
-
 	private void _setCharLeftText (int count) {
 	    textCount.setText(Integer.toString(count));
 	    if (count >= 40)
@@ -109,21 +97,13 @@ public class StatusActivity extends Activity implements OnClickListener, TextWat
 	    else
 	    	textCount.setTextColor(Color.RED);
 	}
-
-	private Twitter getTwitter() {
-		if (twitter == null) {
-			twitter = new Twitter(prefs.getString("username", "student"), prefs.getString("password", "password"));
-			twitter.setAPIRootUrl(prefs.getString("apiroot", "http://yamba.marakana.com/api"));
-		}
-		return twitter;
-	}
 	
 	private class PostToTwitter extends AsyncTask<String, Integer, String> {
 	
 		@Override
 		protected String doInBackground(String... statuses) {
 			try {
-				Twitter.Status status = getTwitter().updateStatus(statuses[0]);
+				Twitter.Status status = yamba.getTwitter().updateStatus(statuses[0]);
 				Log.d(TAG, "updated twitter status");
 				return status.text;
 			} catch (TwitterException e) {
