@@ -15,6 +15,7 @@
             </intent-filter>
         </activity>
         <activity android:name="PrefsActivity" android:label="@string/titlePreference"></activity>
+        <service android:name="UpdaterService"></service>
 
     </application>
 </manifest>

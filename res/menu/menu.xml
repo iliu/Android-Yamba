@@ -2,5 +2,7 @@
 <menu
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:icon="@android:drawable/ic_menu_preferences" android:titleCondensed="@string/menuPrefCondensed" android:title="@string/menuPrefLabel" android:id="@+id/itemPrefs"></item>
+    <item android:title="@string/menuStartService" android:id="@+id/itemStartService" android:icon="@android:drawable/ic_media_play"></item>
+    <item android:title="@string/menuStopService" android:id="@+id/itemStopService" android:icon="@android:drawable/ic_media_pause"></item>
     
 </menu>

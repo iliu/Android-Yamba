@@ -18,6 +18,8 @@ public final class R {
         public static final int buttonUpdate=0x7f070002;
         public static final int editText=0x7f070001;
         public static final int itemPrefs=0x7f070003;
+        public static final int itemStartService=0x7f070004;
+        public static final int itemStopService=0x7f070005;
         public static final int textCount=0x7f070000;
     }
     public static final class layout {
@@ -33,6 +35,8 @@ public final class R {
         public static final int hintText=0x7f050003;
         public static final int menuPrefCondensed=0x7f05000d;
         public static final int menuPrefLabel=0x7f05000c;
+        public static final int menuStartService=0x7f05000e;
+        public static final int menuStopService=0x7f05000f;
         public static final int prefApiLabel=0x7f050009;
         public static final int prefApiSummary=0x7f05000a;
         public static final int prefPasswordLabel=0x7f050007;

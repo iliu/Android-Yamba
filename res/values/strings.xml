@@ -14,4 +14,6 @@
     <string name="titlePreference">Yamba Preferences</string>
     <string name="menuPrefLabel">Preferences</string>
     <string name="menuPrefCondensed">Pref</string>
+    <string name="menuStartService">Start Service</string>
+    <string name="menuStopService">Stop Service</string>
 </resources>
