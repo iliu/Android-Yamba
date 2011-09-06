@@ -15,19 +15,23 @@ public final class R {
         public static final int statusupdatebackground=0x7f020001;
     }
     public static final class id {
-        public static final int buttonUpdate=0x7f070002;
-        public static final int editText=0x7f070001;
-        public static final int itemPrefs=0x7f070008;
-        public static final int itemPurge=0x7f070007;
-        public static final int itemStatus=0x7f070004;
-        public static final int itemTimeline=0x7f070005;
-        public static final int itemToggleService=0x7f070006;
-        public static final int textCount=0x7f070000;
-        public static final int textTimeline=0x7f070003;
+        public static final int buttonUpdate=0x7f070005;
+        public static final int editText=0x7f070004;
+        public static final int itemPrefs=0x7f07000b;
+        public static final int itemPurge=0x7f07000a;
+        public static final int itemStatus=0x7f070007;
+        public static final int itemTimeline=0x7f070008;
+        public static final int itemToggleService=0x7f070009;
+        public static final int listTimeline=0x7f070006;
+        public static final int textCount=0x7f070003;
+        public static final int textCreatedAt=0x7f070001;
+        public static final int textText=0x7f070002;
+        public static final int textUser=0x7f070000;
     }
     public static final class layout {
-        public static final int status=0x7f030000;
-        public static final int timeline=0x7f030001;
+        public static final int row=0x7f030000;
+        public static final int status=0x7f030001;
+        public static final int timeline=0x7f030002;
     }
     public static final class menu {
         public static final int menu=0x7f060000;
