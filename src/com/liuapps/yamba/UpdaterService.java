@@ -7,6 +7,9 @@ import android.util.Log;
 
 public class UpdaterService extends Service{
 	private static final String TAG = "UpdaterService";
+	public static final String NEW_STATUS_INTENT = "com.liuapps.yamba.NEW_STATUS";
+	public static final String NEW_STATUS_EXTRA_COUNT = "com.liuapps.yamba.NEW_STATUS_EXTRA_COUNT";
+	public static final String RECEIVE_TIMELINE_NOTIFICATIONS = "com.liuapps.yamba.RECEIVE_TIMELINE_NOTIFICATIONS";
 	static final int DELAY = 60000; 
 	private boolean runFlag = false;
 	private Updater updater;
@@ -55,6 +58,7 @@ public class UpdaterService extends Service{
 	}
 	
 	private class Updater extends Thread {	
+		Intent intent;
 		public Updater() {
 			super("UpdaterService-Updater");
 		}
@@ -68,6 +72,9 @@ public class UpdaterService extends Service{
 					int newStatusCount = yamba.fetchStatusUpdates();
 					if (newStatusCount > 0) {
 						Log.d(TAG, "We have new statuses");
+						intent = new Intent(NEW_STATUS_INTENT);
+						intent.putExtra(NEW_STATUS_EXTRA_COUNT, newStatusCount);
+						updaterService.sendBroadcast(intent, RECEIVE_TIMELINE_NOTIFICATIONS);
 					}
 					//-------- End work -------------
 					Log.d(TAG, "Updater thread finished, sleeping thread...");
