@@ -2,17 +2,12 @@ package com.liuapps.yamba;
 
 import winterwell.jtwitter.Twitter;
 import winterwell.jtwitter.TwitterException;
-import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -20,9 +15,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class StatusActivity extends Activity implements OnClickListener, TextWatcher{
+public class StatusActivity extends BaseActivity implements OnClickListener, TextWatcher{
 	private static final String TAG = "StatusActivity";
-	YambaApplication yamba;
 	EditText editText;
 	Button updateButton;
 	TextView textCount;
@@ -36,37 +30,12 @@ public class StatusActivity extends Activity implements OnClickListener, TextWat
         editText = (EditText) findViewById(R.id.editText);
         updateButton = (Button) findViewById(R.id.buttonUpdate);
         textCount = (TextView) findViewById(R.id.textCount);
-        yamba = (YambaApplication) getApplication();
         
         updateButton.setOnClickListener(this);
         editText.addTextChangedListener(this);
         _setCharLeftText(140);
     }
     
-    @Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-    	MenuInflater inflater = getMenuInflater();
-    	inflater.inflate(R.menu.menu, menu);
-    	return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		switch (item.getItemId()) {
-		case R.id.itemPrefs:
-			startActivity(new Intent(this, PrefsActivity.class));
-		break;
-		case R.id.itemStartService:
-			startService(new Intent(this, UpdaterService.class));
-			break;
-		case R.id.itemStopService:
-			stopService(new Intent(this, UpdaterService.class));
-			break;
-		}
-		return true;
-		
-	}
-
 	public void onClick(View w) {
     	new PostToTwitter().execute(editText.getText().toString());
     	Log.d(TAG, "onClicked");
@@ -81,12 +50,10 @@ public class StatusActivity extends Activity implements OnClickListener, TextWat
 	public void beforeTextChanged(CharSequence s, int start, int count,
 			int after) {
 	}
-
 	
 	@Override
 	public void onTextChanged(CharSequence s, int start, int before, int count) {		
 	}
-
 	
 	private void _setCharLeftText (int count) {
 	    textCount.setText(Integer.toString(count));

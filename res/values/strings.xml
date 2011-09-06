@@ -16,4 +16,9 @@
     <string name="menuPrefCondensed">Pref</string>
     <string name="menuStartService">Start Service</string>
     <string name="menuStopService">Stop Service</string>
+    <string name="titleTimeline">Timeline</string>
+    <string name="msgSetupPrefs">Please enter your username and password and apiroot</string>
+    <string name="titleServiceToggle">Toggle Service</string>
+    <string name="titlePurge">Purge Database</string>
+    <string name="msgAllDataPurged">Purged Database</string>
 </resources>

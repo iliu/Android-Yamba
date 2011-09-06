@@ -58,6 +58,10 @@ public class YambaApplication extends Application implements OnSharedPreferenceC
 		}
 	}
 
+	public SharedPreferences getPrefs() {
+		return prefs;
+	}
+	
 	public StatusData getStatusData() {
 		return statusData;
 	}

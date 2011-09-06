@@ -17,13 +17,17 @@ public final class R {
     public static final class id {
         public static final int buttonUpdate=0x7f070002;
         public static final int editText=0x7f070001;
-        public static final int itemPrefs=0x7f070003;
-        public static final int itemStartService=0x7f070004;
-        public static final int itemStopService=0x7f070005;
+        public static final int itemPrefs=0x7f070008;
+        public static final int itemPurge=0x7f070007;
+        public static final int itemStatus=0x7f070004;
+        public static final int itemTimeline=0x7f070005;
+        public static final int itemToggleService=0x7f070006;
         public static final int textCount=0x7f070000;
+        public static final int textTimeline=0x7f070003;
     }
     public static final class layout {
         public static final int status=0x7f030000;
+        public static final int timeline=0x7f030001;
     }
     public static final class menu {
         public static final int menu=0x7f060000;
@@ -37,6 +41,8 @@ public final class R {
         public static final int menuPrefLabel=0x7f05000c;
         public static final int menuStartService=0x7f05000e;
         public static final int menuStopService=0x7f05000f;
+        public static final int msgAllDataPurged=0x7f050014;
+        public static final int msgSetupPrefs=0x7f050011;
         public static final int prefApiLabel=0x7f050009;
         public static final int prefApiSummary=0x7f05000a;
         public static final int prefPasswordLabel=0x7f050007;
@@ -44,7 +50,10 @@ public final class R {
         public static final int prefUsernameLabel=0x7f050005;
         public static final int prefUsernameSummary=0x7f050006;
         public static final int titlePreference=0x7f05000b;
+        public static final int titlePurge=0x7f050013;
+        public static final int titleServiceToggle=0x7f050012;
         public static final int titleStatus=0x7f050002;
+        public static final int titleTimeline=0x7f050010;
     }
     public static final class xml {
         public static final int prefs=0x7f040000;

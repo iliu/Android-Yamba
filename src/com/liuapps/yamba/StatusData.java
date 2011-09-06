@@ -36,7 +36,7 @@ public class StatusData {
 	
 	public Cursor getStatusUpdates() {
 		SQLiteDatabase db = this.dbHelper.getReadableDatabase();
-		return db.query(DbHelper.TABLE, null, null, null, TAG, TAG, GET_ALL_ORDER_BY);
+		return db.query(DbHelper.TABLE, null, null, null, null, null, GET_ALL_ORDER_BY);
 	}
 	
 	public long getLatestStatusCreatedAtTime() {
@@ -65,6 +65,11 @@ public class StatusData {
 		} finally {
 			db.close();
 		}
+	}
+
+	public void delete() {
+		SQLiteDatabase db = dbHelper.getWritableDatabase();
+		db.delete(DbHelper.TABLE, null, null);
 	}
 	
 }
