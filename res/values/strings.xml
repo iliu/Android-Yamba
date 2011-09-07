@@ -30,6 +30,12 @@
 	<string name="receive_timeline_notifications_permission_description">This permission permits the receiving of timeline
 		notifications</string>
 	<string name="msgLastTimelineUpdate">Last Timeline Update</string>
+	
+	
+	 <string name="msgNotificationTitle">New Yamba Status Updates</string>
+  	<string name="msgNotificationMessage">You\'ve got %d new status update(s)</string>
+  	
+  	
 	<string name="summaryUpdaterInterval">Select how often the update service is run</string>
 	<string name="titleUpdaterInterval">Update Interval</string>
 	<string-array name="locationProviderLabels">

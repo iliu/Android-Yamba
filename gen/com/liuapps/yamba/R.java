@@ -57,6 +57,8 @@ public final class R {
         public static final int menuStopService=0x7f05000f;
         public static final int msgAllDataPurged=0x7f050015;
         public static final int msgLastTimelineUpdate=0x7f05001a;
+        public static final int msgNotificationMessage=0x7f05001c;
+        public static final int msgNotificationTitle=0x7f05001b;
         public static final int msgSetupPrefs=0x7f050012;
         public static final int prefApiLabel=0x7f050009;
         public static final int prefApiSummary=0x7f05000a;
@@ -68,16 +70,16 @@ public final class R {
         public static final int receive_timeline_notifications_permission_label=0x7f050018;
         public static final int send_timeline_notifications_permission_description=0x7f050017;
         public static final int send_timeline_notifications_permission_label=0x7f050016;
-        public static final int summaryLocationProvider=0x7f05001e;
-        public static final int summaryUpdaterInterval=0x7f05001b;
-        public static final int titleLocationProvider=0x7f05001d;
+        public static final int summaryLocationProvider=0x7f050020;
+        public static final int summaryUpdaterInterval=0x7f05001d;
+        public static final int titleLocationProvider=0x7f05001f;
         public static final int titlePreference=0x7f05000b;
         public static final int titlePurge=0x7f050014;
         public static final int titleRefresh=0x7f050011;
         public static final int titleServiceToggle=0x7f050013;
         public static final int titleStatus=0x7f050002;
         public static final int titleTimeline=0x7f050010;
-        public static final int titleUpdaterInterval=0x7f05001c;
+        public static final int titleUpdaterInterval=0x7f05001e;
     }
     public static final class xml {
         public static final int prefs=0x7f040000;
