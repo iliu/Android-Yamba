@@ -43,9 +43,11 @@ public class UpdaterService extends Service{
 		super.onStartCommand(intent, flags, startId);
 		Log.d(TAG, "onStartCommand");
 		
-		this.runFlag = true;
-		this.updater.start();
-		yamba.setServiceRunning(true);
+		if (this.runFlag == false) {
+			this.runFlag = true;
+			this.updater.start();
+			yamba.setServiceRunning(true);
+		}
 		
 		return START_STICKY;
 	}

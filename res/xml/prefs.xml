@@ -4,4 +4,5 @@
     <EditTextPreference android:title="@string/prefUsernameLabel" android:key="username" android:summary="@string/prefUsernameSummary"></EditTextPreference>
     <EditTextPreference android:title="@string/prefPasswordLabel" android:key="password" android:summary="@string/prefPasswordSummary" android:password="true"></EditTextPreference>
     <EditTextPreference android:title="@string/prefApiLabel" android:summary="@string/prefApiSummary" android:key="apiroot"></EditTextPreference>
+    <ListPreference android:entryValues="@array/locationProviderValues" android:entries="@array/locationProviderLabels" android:key="locationProvider" android:summary="@string/summaryLocationProvider" android:title="@string/titleLocationProvider"></ListPreference>
 </PreferenceScreen>

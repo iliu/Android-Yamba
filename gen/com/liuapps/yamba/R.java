@@ -8,6 +8,10 @@
 package com.liuapps.yamba;
 
 public final class R {
+    public static final class array {
+        public static final int locationProviderLabels=0x7f060000;
+        public static final int locationProviderValues=0x7f060001;
+    }
     public static final class attr {
     }
     public static final class drawable {
@@ -16,19 +20,19 @@ public final class R {
         public static final int twitter_icon=0x7f020002;
     }
     public static final class id {
-        public static final int buttonUpdate=0x7f070005;
-        public static final int editText=0x7f070004;
-        public static final int itemPrefs=0x7f07000c;
-        public static final int itemPurge=0x7f07000b;
-        public static final int itemStatus=0x7f070008;
-        public static final int itemTimeline=0x7f070009;
-        public static final int itemToggleService=0x7f07000a;
-        public static final int listTimeline=0x7f070006;
-        public static final int textCount=0x7f070003;
-        public static final int textCreatedAt=0x7f070001;
-        public static final int textText=0x7f070002;
-        public static final int textUser=0x7f070000;
-        public static final int yamba_icon=0x7f070007;
+        public static final int buttonUpdate=0x7f080005;
+        public static final int editText=0x7f080004;
+        public static final int itemPrefs=0x7f08000c;
+        public static final int itemPurge=0x7f08000b;
+        public static final int itemStatus=0x7f080008;
+        public static final int itemTimeline=0x7f080009;
+        public static final int itemToggleService=0x7f08000a;
+        public static final int listTimeline=0x7f080006;
+        public static final int textCount=0x7f080003;
+        public static final int textCreatedAt=0x7f080001;
+        public static final int textText=0x7f080002;
+        public static final int textUser=0x7f080000;
+        public static final int yamba_icon=0x7f080007;
     }
     public static final class layout {
         public static final int row=0x7f030000;
@@ -37,7 +41,7 @@ public final class R {
         public static final int yamba_widget=0x7f030003;
     }
     public static final class menu {
-        public static final int menu=0x7f060000;
+        public static final int menu=0x7f070000;
     }
     public static final class string {
         public static final int app_name=0x7f050001;
@@ -61,6 +65,8 @@ public final class R {
         public static final int receive_timeline_notifications_permission_label=0x7f050017;
         public static final int send_timeline_notifications_permission_description=0x7f050016;
         public static final int send_timeline_notifications_permission_label=0x7f050015;
+        public static final int summaryLocationProvider=0x7f05001b;
+        public static final int titleLocationProvider=0x7f05001a;
         public static final int titlePreference=0x7f05000b;
         public static final int titlePurge=0x7f050013;
         public static final int titleServiceToggle=0x7f050012;

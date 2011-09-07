@@ -1,29 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, YambaActivity!</string>
-    <string name="app_name">Yamba</string>
-    <string name="titleStatus">Status Update</string>
-    <string name="hintText">Please enter your 140-character status</string>
-    <string name="buttonUpdate">Update</string>
-    <string name="prefUsernameLabel">Username</string>
-    <string name="prefUsernameSummary">Please enter your username</string>
-    <string name="prefPasswordLabel">Password</string>
-    <string name="prefPasswordSummary">Please enter you password</string>
-    <string name="prefApiLabel">API Root</string>
-    <string name="prefApiSummary">Please enter your API Root</string>
-    <string name="titlePreference">Yamba Preferences</string>
-    <string name="menuPrefLabel">Preferences</string>
-    <string name="menuPrefCondensed">Pref</string>
-    <string name="menuStartService">Start Service</string>
-    <string name="menuStopService">Stop Service</string>
-    <string name="titleTimeline">Timeline</string>
-    <string name="msgSetupPrefs">Please enter your username and password and apiroot</string>
-    <string name="titleServiceToggle">Toggle Service</string>
-    <string name="titlePurge">Purge Database</string>
-    <string name="msgAllDataPurged">Purged Database</string>
-    <string name="send_timeline_notifications_permission_label">Send Timeline Notification</string>
-    <string name="send_timeline_notifications_permission_description">This permission permits the sending of timeline notifications</string>
-    <string name="receive_timeline_notifications_permission_label">Receive Timeline Notifications</string>
-    <string name="receive_timeline_notifications_permission_description">This permission permits the receiving of timeline notifications</string>
-    <string name="msgLastTimelineUpdate">Last Timeline Update</string>
+	<string name="hello">Hello World, YambaActivity!</string>
+	<string name="app_name">Yamba</string>
+	<string name="titleStatus">Status Update</string>
+	<string name="hintText">Please enter your 140-character status</string>
+	<string name="buttonUpdate">Update</string>
+	<string name="prefUsernameLabel">Username</string>
+	<string name="prefUsernameSummary">Please enter your username</string>
+	<string name="prefPasswordLabel">Password</string>
+	<string name="prefPasswordSummary">Please enter you password</string>
+	<string name="prefApiLabel">API Root</string>
+	<string name="prefApiSummary">Please enter your API Root</string>
+	<string name="titlePreference">Yamba Preferences</string>
+	<string name="menuPrefLabel">Preferences</string>
+	<string name="menuPrefCondensed">Pref</string>
+	<string name="menuStartService">Start Service</string>
+	<string name="menuStopService">Stop Service</string>
+	<string name="titleTimeline">Timeline</string>
+	<string name="msgSetupPrefs">Please enter your username and password and apiroot
+	</string>
+	<string name="titleServiceToggle">Toggle Service</string>
+	<string name="titlePurge">Purge Database</string>
+	<string name="msgAllDataPurged">Purged Database</string>
+	<string name="send_timeline_notifications_permission_label">Send Timeline Notification</string>
+	<string name="send_timeline_notifications_permission_description">This permission permits the sending of timeline
+		notifications</string>
+	<string name="receive_timeline_notifications_permission_label">Receive Timeline Notifications</string>
+	<string name="receive_timeline_notifications_permission_description">This permission permits the receiving of timeline
+		notifications</string>
+	<string name="msgLastTimelineUpdate">Last Timeline Update</string>
+	<string-array name="locationProviderLabels">
+		<item>None</item>
+		<item>GPS</item>
+		<item>Network</item>
+	</string-array>
+	<string-array name="locationProviderValues">
+		<item>NONE</item>
+		<item>gps</item>
+		<item>network</item>
+	</string-array>
+		<string name="titleLocationProvider">Location Provider</string>
+		<string name="summaryLocationProvider">Please choose which location provider you want to use</string>
 </resources>

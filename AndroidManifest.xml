@@ -60,4 +60,6 @@
 
 	<uses-permission android:name="com.liuapps.yamba.SEND_TIMELINE_NOTIFICATIONS" />
 	<uses-permission android:name="com.liuapps.yamba.RECEIVE_TIMELINE_NOTIFICATIONS" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 </manifest>

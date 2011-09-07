@@ -17,6 +17,8 @@ public class YambaApplication extends Application implements OnSharedPreferenceC
 	private SharedPreferences prefs;
 	private boolean serviceRunning;
 	private StatusData statusData;
+	public static final String LOCATION_PROVIDER_NONE = "NONE";
+	
 	
 	public synchronized int fetchStatusUpdates() {
 		List<Twitter.Status> timeline = null;
@@ -61,6 +63,10 @@ public class YambaApplication extends Application implements OnSharedPreferenceC
 	public SharedPreferences getPrefs() {
 		return prefs;
 	}
+	
+	public String getProvider() {
+	    return prefs.getString("locationProvider", LOCATION_PROVIDER_NONE);
+	  }
 	
 	public StatusData getStatusData() {
 		return statusData;
