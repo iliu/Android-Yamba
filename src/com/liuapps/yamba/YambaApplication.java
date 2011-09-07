@@ -3,8 +3,12 @@ package com.liuapps.yamba;
 import java.util.List;
 
 import winterwell.jtwitter.Twitter;
+import android.app.AlarmManager;
 import android.app.Application;
+import android.app.PendingIntent;
 import android.content.ContentValues;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.preference.PreferenceManager;
@@ -18,7 +22,29 @@ public class YambaApplication extends Application implements OnSharedPreferenceC
 	private boolean serviceRunning;
 	private StatusData statusData;
 	public static final String LOCATION_PROVIDER_NONE = "NONE";
+	private AlarmManager alarmManager;
+	PendingIntent pendingIntent;
 	
+	public void pauseAlarm() {
+		if (pendingIntent != null) {
+			alarmManager.cancel(pendingIntent);
+		}
+		Log.d(TAG, "pauseAlarm");
+	}
+
+	public void setAlarm() {
+		long interval = getUpdateInterval();
+		Intent intent = new Intent(this, UpdaterIntentService.class);
+		pendingIntent = PendingIntent.getService(this, -1, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+		if (interval != 0) {
+			Log.d(TAG, "setAlarm: Setting Alarm to interval " + interval);
+			alarmManager.setRepeating(AlarmManager.RTC, System.currentTimeMillis(), interval, pendingIntent);
+		} else {
+			Log.d(TAG, "setAlarm: Stopping Alarm");
+			alarmManager.cancel(pendingIntent);
+		}
+	}
 	
 	public synchronized int fetchStatusUpdates() {
 		List<Twitter.Status> timeline = null;
@@ -36,8 +62,7 @@ public class YambaApplication extends Application implements OnSharedPreferenceC
 			int newStatusCount = 0;
 			
 			for (Twitter.Status status : timeline) {
-				Log.d(TAG, String.format("%s: %s", status.user.name, status.text));
-
+				//Log.d(TAG, String.format("%s: %s", status.user.name, status.text));
 				values.clear();
 				values.put(DbHelper.C_ID, status.id);
 				long statusCreatedAt = status.createdAt.getTime();
@@ -67,6 +92,10 @@ public class YambaApplication extends Application implements OnSharedPreferenceC
 	public String getProvider() {
 	    return prefs.getString("locationProvider", LOCATION_PROVIDER_NONE);
 	  }
+
+	public long getUpdateInterval() {
+		return Long.parseLong(prefs.getString("interval", "0"));
+	}
 	
 	public StatusData getStatusData() {
 		return statusData;
@@ -99,6 +128,7 @@ public class YambaApplication extends Application implements OnSharedPreferenceC
 	    this.prefs.registerOnSharedPreferenceChangeListener(this);
 	    
 	    statusData = new StatusData(this);
+		alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
 	    
 	    Log.i(TAG, "onCreated");
 	}
@@ -108,7 +138,7 @@ public class YambaApplication extends Application implements OnSharedPreferenceC
 			String key) {
 		// TODO Auto-generated method stub
 		this.twitter = null;
-		
+		this.setAlarm();
 	}
 
 	@Override

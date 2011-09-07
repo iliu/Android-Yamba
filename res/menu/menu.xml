@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu
   xmlns:android="http://schemas.android.com/apk/res/android">
+  	<item android:id="@+id/itemRefresh" android:title="@string/titleRefresh" android:icon="@android:drawable/ic_menu_rotate"></item>
     <item android:id="@+id/itemStatus" android:title="@string/titleStatus" android:icon="@android:drawable/ic_menu_edit"></item>
     <item android:id="@+id/itemTimeline" android:title="@string/titleTimeline" android:icon="@android:drawable/ic_menu_sort_by_size"></item>
     <item android:id="@+id/itemToggleService" android:title="@string/titleServiceToggle" android:icon="@android:drawable/ic_media_play"></item>
     <item android:icon="@android:drawable/ic_menu_delete" android:title="@string/titlePurge" android:id="@+id/itemPurge"></item>
     <item android:icon="@android:drawable/ic_menu_preferences" android:titleCondensed="@string/menuPrefCondensed" android:title="@string/menuPrefLabel" android:id="@+id/itemPrefs"></item>
-    
-    
-    
     
 </menu>

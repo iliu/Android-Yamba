@@ -52,7 +52,9 @@ public class BaseActivity extends Activity {
 				startService(new Intent(this, UpdaterService.class));
 			}
 			break;
-
+		case R.id.itemRefresh:
+			startService(new Intent(this, UpdaterIntentService.class));
+			break;
 		}
 		return true;
 

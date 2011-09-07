@@ -9,6 +9,8 @@ package com.liuapps.yamba;
 
 public final class R {
     public static final class array {
+        public static final int interval=0x7f060002;
+        public static final int intervalValues=0x7f060003;
         public static final int locationProviderLabels=0x7f060000;
         public static final int locationProviderValues=0x7f060001;
     }
@@ -22,11 +24,12 @@ public final class R {
     public static final class id {
         public static final int buttonUpdate=0x7f080005;
         public static final int editText=0x7f080004;
-        public static final int itemPrefs=0x7f08000c;
-        public static final int itemPurge=0x7f08000b;
-        public static final int itemStatus=0x7f080008;
-        public static final int itemTimeline=0x7f080009;
-        public static final int itemToggleService=0x7f08000a;
+        public static final int itemPrefs=0x7f08000d;
+        public static final int itemPurge=0x7f08000c;
+        public static final int itemRefresh=0x7f080008;
+        public static final int itemStatus=0x7f080009;
+        public static final int itemTimeline=0x7f08000a;
+        public static final int itemToggleService=0x7f08000b;
         public static final int listTimeline=0x7f080006;
         public static final int textCount=0x7f080003;
         public static final int textCreatedAt=0x7f080001;
@@ -52,26 +55,29 @@ public final class R {
         public static final int menuPrefLabel=0x7f05000c;
         public static final int menuStartService=0x7f05000e;
         public static final int menuStopService=0x7f05000f;
-        public static final int msgAllDataPurged=0x7f050014;
-        public static final int msgLastTimelineUpdate=0x7f050019;
-        public static final int msgSetupPrefs=0x7f050011;
+        public static final int msgAllDataPurged=0x7f050015;
+        public static final int msgLastTimelineUpdate=0x7f05001a;
+        public static final int msgSetupPrefs=0x7f050012;
         public static final int prefApiLabel=0x7f050009;
         public static final int prefApiSummary=0x7f05000a;
         public static final int prefPasswordLabel=0x7f050007;
         public static final int prefPasswordSummary=0x7f050008;
         public static final int prefUsernameLabel=0x7f050005;
         public static final int prefUsernameSummary=0x7f050006;
-        public static final int receive_timeline_notifications_permission_description=0x7f050018;
-        public static final int receive_timeline_notifications_permission_label=0x7f050017;
-        public static final int send_timeline_notifications_permission_description=0x7f050016;
-        public static final int send_timeline_notifications_permission_label=0x7f050015;
-        public static final int summaryLocationProvider=0x7f05001b;
-        public static final int titleLocationProvider=0x7f05001a;
+        public static final int receive_timeline_notifications_permission_description=0x7f050019;
+        public static final int receive_timeline_notifications_permission_label=0x7f050018;
+        public static final int send_timeline_notifications_permission_description=0x7f050017;
+        public static final int send_timeline_notifications_permission_label=0x7f050016;
+        public static final int summaryLocationProvider=0x7f05001e;
+        public static final int summaryUpdaterInterval=0x7f05001b;
+        public static final int titleLocationProvider=0x7f05001d;
         public static final int titlePreference=0x7f05000b;
-        public static final int titlePurge=0x7f050013;
-        public static final int titleServiceToggle=0x7f050012;
+        public static final int titlePurge=0x7f050014;
+        public static final int titleRefresh=0x7f050011;
+        public static final int titleServiceToggle=0x7f050013;
         public static final int titleStatus=0x7f050002;
         public static final int titleTimeline=0x7f050010;
+        public static final int titleUpdaterInterval=0x7f05001c;
     }
     public static final class xml {
         public static final int prefs=0x7f040000;

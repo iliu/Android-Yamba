@@ -18,7 +18,7 @@ public class YambaWidget extends AppWidgetProvider {
 	@Override
 	public void onEnabled(Context context) {
 		super.onEnabled(context);
-		context.startService(new Intent(context, UpdaterService.class));	
+		context.startService(new Intent(context, UpdaterIntentService.class));	
 	}
 
 	@Override

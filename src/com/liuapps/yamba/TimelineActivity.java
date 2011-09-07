@@ -83,7 +83,7 @@ public class TimelineActivity extends BaseActivity {
 			// Update the created at text to relative time
 			long timestamp = cursor.getLong(columnIndex); // 
 			CharSequence relTime = DateUtils.getRelativeTimeSpanString(timestamp);
-			Log.d(TAG, relTime.toString());// 
+			//Log.d(TAG, relTime.toString());// 
 			((TextView) view).setText(relTime); // 
 
 			return true; // 
